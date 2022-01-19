@@ -1,2 +1,4 @@
 # NeteaseMusic
-Use jquery to buil this music program
+Use jquery to build this music program
+
+
