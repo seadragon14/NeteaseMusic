@@ -1,0 +1,117 @@
+/* 顶部播放栏的所有样式 */
+
+#TopNavigation{
+    display: flex;
+    flex-direction: row;
+    width: 1536px;
+    height: 70px;
+}
+
+.LeftTopNavigation{
+    width: 786px;
+    height: 70px;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid gray;
+    box-sizing: border-box;
+}
+.RightTopNavigation{
+    width: 786px;
+    height: 70px;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: 2px solid gray;
+    box-sizing: border-box;
+}
+.icon{
+    background-image: url(../music-img/Icon.png);
+    width:250px;
+    height: 70px;
+    background-position: 0px 5px;
+}
+.searchPart{
+    margin-left: 10px;
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+}
+.search{
+    width: 150px;
+    height: 30px;
+    border: 2px solid lightpink;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 10px;
+    outline: none;
+}
+.isLoading{
+    width: 80px;
+    height: auto;
+    margin-left: 20px;
+    color: pink;
+    font-size: 16px;
+    line-height: 70px;
+    font-weight: 600;
+}
+.currentTime{
+    width: 100px;
+    height: auto;
+    color: aliceblue;
+    text-align: center;
+    line-height: 70px;
+}
+.loginStatus{
+    margin-right: 10px;
+    width: auto;
+    height: 70px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid gray;
+    box-sizing: border-box;
+}
+#headImg{
+    width: 60px;
+    height: 60px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+
+    
+}
+.otherMsg{
+    margin-left: 6px;
+    margin-right: 5px;
+    height: 60px;
+    margin-top: 5px;
+}
+#nickName{
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    color: grey;
+}
+.changeTheme{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 80px;
+    height: 70px;
+    line-height: 40px;
+    background-color: lightsalmon;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid gray;
+    box-sizing: border-box;
+}
+#selectTheme{
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    font-size: 16px;
+    border: 1px solid lightcoral;
+}

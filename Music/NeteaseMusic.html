@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/TopNavigation.css">
+    <link rel="stylesheet" href="./css/Center.css">
+    <link rel="stylesheet" href="./css/Bottom.css">
+    <link rel="short icon" href="../img/音乐.png">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <title>👾StormMusic14</title>
+</head>
+<body>
+    <!-- 顶部导航栏-------------------------->
+    <div id="TopNavigation">
+        <!-- 左边顶部 -->
+        <div class="LeftTopNavigation">
+            <!-- 图标 -->
+            <div class="icon"></div>
+            <!-- 缓冲显示 -->
+            <div class="isLoading"></div>
+            <!-- 搜索部分 -->
+            <div class="searchPart">
+                <input class="search" type="text" placeholder="🔍">
+            </div>
+        </div>
+        <!-- 右边顶部 -->
+        <div class="RightTopNavigation">
+            <!-- 更换主题 -->
+            <div class="changeTheme">
+                <div class="remindText">更换主题</div>
+                <select id="selectTheme" onchange="changeTheme()">
+                    <option value="RedWhite">白红</option>
+                    <option value="GreenWhite">白绿</option>
+                    <option value="BlueWhite">白蓝</option>
+                </select>
+            </div>
+            <!-- 登录状态 -->
+            <div class="loginStatus">
+                <!-- 头像信息 -->
+                <img id="headImg" src="./music-img/virus.png" >
+                <!-- 其余信息 -->
+                <div class="otherMsg">
+                    <div id="nickName">---</div>
+                    <div id="loginMsg">未登录</div>
+                </div>
+            </div>
+            <div class="currentTime"></div>
+        </div>
+    </div>
+
+    <!-- 主体部分-------------------------->
+    <div id="MusicBody">
+        <!-- 侧边栏 -->
+        <div id="sidebar">
+            <div class="sentence">首页</div>
+            <div class="sentence">歌手榜</div>
+            <div class="sentence">Mv排行榜</div>
+            <div class="sentence">歌手热门50曲</div>
+        </div>
+        <!-- 主体内容盒子 -->
+        <div id="mainBox">
+        <!-- 首页banner -->
+        <div class="MyHome">
+            <div id="showBanner">
+                <div id="banner">
+                    <div class="Contain-imgs">
+                    </div>
+                </div>
+            </div>
+            <!-- 首页其他内容 -->
+            <div id="OtherList">
+                <div id="SingerList">歌手榜</div>
+                <div id="MVPlay">MV排行榜</div>
+            </div>
+        </div>
+        <!-- MV排行榜 -->
+        <div class="MvList">
+            <ul class="MvInfo"></ul>
+        </div>
+        <!-- mv播放页面 -->
+        <div class="MvVedioInfo">
+            <div class="mvtitle"></div>
+            <video id="MvVedio" controls ></video>
+            <div class="briefs"></div>
+        </div>
+        <!-- 歌手榜单 -->
+        <div class="singerList">
+            <ul class="singerInfo"></ul>
+        </div>
+        <!-- 歌手热门50曲 -->
+        <div id="SongsTop50">
+            <div id="MainTop50">
+                <div class="MusicTitleTop50">音乐标题</div>
+                <div class="MusicPlayers">歌手</div>
+                <div class="MusicAlbums">专辑</div>
+                <div class="MusicTime">时长</div>
+            </div>
+            <ul id="Top50"></ul>
+        </div>
+        <!-- 搜索页面 -->
+            <div id="searchDisplay">
+                <div id="mainText">
+                    <div class="MusicTitle">音乐标题</div>
+                    <div class="MusicPlayer">歌手</div>
+                    <div class="MusicAlbums">专辑</div>
+                    <div class="MusicTime">时长</div>
+                </div>
+                <ul id="displaySongs"></ul>
+            </div>
+        <!-- 歌词页面 -->
+            <div class="lyric">
+                <ul id="Lyric"></ul>
+                <div id="OtherMsg">
+                    <img id="AlbumsImg" src="" >
+                    <div id="Singer"></div>
+                    <div id="SingerType"></div>
+                    <div id="BriefDesc"></div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <!-- 播放栏------------------------ -->
+    <div id="PlayBar">
+        <div class="leftBar">
+            <div class="playerImgs">
+                <div class="playerImgs-contain">
+                    <img id="playerImg" >
+                </div>
+
+                <div id="playerMsg">
+                    <div class="SongTitle"></div>
+                    <div class="Singer"></div>
+                </div>
+            </div>
+            <!-- 播放按钮和进度条 -->
+            <div class="playerBar">
+                <!-- 播放按钮 -->
+                <div class="btns">
+                    <!-- 上一曲 -->
+                    <a id="Last">
+                            <img class="btn-Last" src="./music-img/上一曲.png">
+                    </a>
+                    <!-- 暂停，播放 -->
+                    <a id="Play">
+                            <img class="btn-Play" src="./music-img/播放.png">
+                    </a>
+                    <!-- 下一曲 -->
+                    <a id="Next">
+                            <img class="btn-Next" src="./music-img/下一曲.png">
+                    </a>
+                                 
+                    <audio controls id="Music" ontimeupdate="updata()" src="./music-img/王嘉尔、GAI周延 - Papillon (Live).mp3"></audio>
+                </div>
+                <!-- 进度条 -->
+                <div class="MusicPlayBar">
+                    <div class="progress">
+                        <div class="playBar"></div>
+                       <div class="filldiv"></div>
+                       <div class="roundDot"></div>
+                    </div>
+                    <div class="playTime">
+                        <div class="playText"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightBar">
+            <div class="voiceBar">
+                <div class="contain-Img">
+                    <img class="voiceImg" src="./music-img/42音量.png">
+                </div>
+                <div class="Voiceprogress">
+                    <div class="VoiceplayBar"></div>
+                   <div class="Voicefilldiv"></div>
+                   <div class="VoiceroundDot"></div>
+                </div>
+            </div>
+            <div class="playSequence">
+                <img title="循环" class="sequence" src="./music-img/顺序播放.png">
+            </div>
+        </div>
+    </div>
+    <script src="./js/Search&Audio.js"></script>
+    <script src="./js/HomePage.js"></script>
+    <script src="./js/Theme.js"></script>
+    <script src="./js/Help.js"></script>
+</body>
+</html>

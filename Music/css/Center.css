@@ -1,0 +1,492 @@
+/* 中间部分的所有样式 */
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 1536px;
+    height: 730px;
+}
+a{
+    text-decoration: none;
+}
+
+/* 包括侧边栏和主体内容盒子 */
+#MusicBody{
+    width: 1536px;
+    height: 580px;
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 主体内容盒子 */
+#mainBox{
+    width: 1336px;
+    height: 580px;
+    background-color: lightslategray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#displaySongs,#Top50{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 1326px;
+}
+
+/* 歌曲的list展示(搜索和热门50曲) */
+.songs-list{
+    width: 1326px;
+    height: 40px;
+    font-size: 19px;
+    line-height: 40px;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+.songs-list:hover{
+    opacity: 1;
+    transition: 0.5s;
+    color: lightpink;
+}
+
+/* 歌曲搜索和热门50曲主体盒子 */
+#searchDisplay,#SongsTop50{
+    width: 1326px;
+    display: flex;
+    flex-direction: column;
+}
+/* 歌曲搜索和热门50曲主体盒子的标题*/
+#mainText,#MainTop50{
+    width: 1326px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+.MusicTitleTop50{
+    margin-left: 20px;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+.MusicTitle{
+    margin-left: 20px;
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.MusicPlayers{
+    width: 300px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+.MusicPlayer{
+    width: 160px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.MusicAlbums{
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+    background-color: white;
+    overflow: hidden;
+}
+.MusicTime{
+    width: 100px;
+    height: 40px;
+    margin-left: 30px;
+    line-height: 40px;
+    background-color: white;
+}
+
+
+/* 侧边栏 */
+#sidebar{
+    width: 200px;
+    height: 580px;
+    background-color: rgb(214, 172, 155);
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid gray;
+    box-sizing: border-box;
+}
+.sentence{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(128, 240, 171);
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom:1px solid white;
+    border-right: 2px solid gray;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+}
+.sentence:hover{
+    transition: 0.5s;
+    background-color: aliceblue;
+    color: lightslategray;
+    
+}
+
+/*首页 */
+.MyHome{
+    width: 1336px;
+    height: 580px;
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* 轮播图 */
+#showBanner{
+    width: 1336px;
+    height: 320px;
+
+}
+.bannerUrl{
+    text-decoration: none;    
+}
+
+#banner{
+    position: relative;
+    margin-left: 243px;
+    background-color: rgb(190, 189, 189);
+    opacity: 0.9;
+    width: 850px;
+    overflow: hidden;
+    height: 320px;
+}
+.Contain-imgs{
+    width: 10000px;
+    display: flex;
+    transition: 0.7s;
+}
+.imgs{
+    margin-top: 10px;
+    width: 850px;
+    height: 300px;
+    transition: 0.6s;
+}
+
+/* mv排行榜 */
+.MvList{
+    width: 1336px;
+    height: 580px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #a8aaeb;
+    display: none;
+}
+.MvInfo{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 1326px;
+}
+
+
+/* mv播放器 */
+
+.MvVedioInfo{
+    width: 1336px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(../music-img/background/mv.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.mvtitle{
+    margin-left: 218px;
+    width: 900px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.briefs{
+    width:900px;
+    height: auto;
+    margin-left: 218px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#MvVedio{
+    margin-left: 218px;  
+    width: 900px;
+    height: 480px;
+}
+
+/* 列表 */
+/* mv标题 */
+.MVtitle{
+    width: 500px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    overflow: hidden;
+}
+/* mv艺术家 */
+.MVartist{
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    overflow: hidden;
+}
+/* mv播放次数 */
+.MVplaycount{
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.singerList{
+    width: 1336px;
+    height: 580px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: url(../music-img/background/img.jpg);
+    display: none;
+
+}
+.singerInfo{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 1326px;
+}
+.LI{
+    margin-left: 10px;
+    width: 1326px;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid lightgreen;
+    box-sizing: border-box;
+}
+.LI:hover{
+    transition: 0.5s;
+    opacity: 1;
+}
+.List,.MVgrade{
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 2px solid lightgreen;
+    box-sizing: border-box;
+}
+.singerImg{
+    width: 60px;
+    height: 60px;
+    border-bottom: 2px solid lightgreen;
+    box-sizing: border-box;
+}
+.singerName{
+    margin-left: 30px;
+    height: 60px;
+    width: 380px;
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 2px solid lightgreen;
+    box-sizing: border-box;
+}
+.singerMsg{
+    height: 60px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 2px solid lightgreen;
+    box-sizing: border-box;
+}
+.singerMsg2{
+    margin-left: 120px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 2px solid lightgreen;
+    box-sizing: border-box;
+}
+
+/* 首页歌手榜和mv排行榜 */
+#OtherList{
+    margin-left: 243px;
+    width: 850px;
+    height: 320px;
+    background-color: rgb(190, 189, 189);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 歌手榜 */
+#SingerList{
+    margin: auto;
+    width: 405px;
+    height: 150px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 150px;
+    border: 3px solid lightsalmon;
+    box-sizing: border-box;
+    color: #42B583;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    background: url(http://p7.qhimg.com/bdm/384_237_0/t01e1c4f14e10e93976.jpg);
+}
+#SingerList:hover{
+    opacity: 1;
+    transition: 0.7s;
+    background-color: #42B583;
+    color: white;
+}
+
+/* mv排行榜 */
+#MVPlay{
+    margin: auto;
+    width: 405px;
+    height: 150px;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 150px;
+    border: 3px solid lightsalmon;
+    box-sizing: border-box;
+    color: #42B583;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    background: url(http://p1.qhimg.com/bdm/384_237_0/t01ba63556436f505a3.jpg);
+}
+#MVPlay:hover{
+    opacity: 1;
+    transition: 0.7s;
+    background-color: #42B583;
+    color: white;
+}
+
+
+
+
+
+/* 歌词与歌手描述页面页面 */
+.lyric{
+    width: 1336px;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+/* 歌词 */
+#Lyric{
+    width: 600px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 歌词相关 */
+.lyric-item{
+    transition: 0.7s;
+    padding-top: 3px;   
+    text-align: center;
+    width: 600px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    line-height: 20px;
+}
+.lyric-item:hover{
+    transition: 0.4s;
+    color:red;
+}
+
+/* 歌手描述页面 */
+#OtherMsg{
+    width: 636px;
+    display: flex;
+    flex-direction: column;
+}
+
+#AlbumsImg{
+    width: 300px;
+    height: 240px;
+
+    margin-left: 170px;
+    margin-top: 0px;
+}
+#Singer{
+    width: 636px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+
+}
+#SingerType{
+    margin-top: 20px;
+    line-height: 22px;
+    width: 636px;
+    height: 22px;
+    text-align: center;
+    font-size: 25px;
+
+}
+#BriefDesc{
+    width: 636px;
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+
+}
